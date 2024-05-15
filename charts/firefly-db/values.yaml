@@ -9,8 +9,11 @@ storage:
   dataSize: 1Gi
   # -- Use an existing PersistentVolumeClaim, overrides values above
   existingClaim: ""
-  
+
 backup:
+  # Set to false to disable periodic backup and backup on helm hooks
+  enabled: true
+
   # There are two possible backup destinations currently implemented, http and pvc
   destination: http
   schedule: "0 3 * * *"
