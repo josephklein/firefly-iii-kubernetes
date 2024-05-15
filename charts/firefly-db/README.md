@@ -36,7 +36,7 @@ storage:
 | backup.pvc.class | string | `nil` |  |
 | backup.pvc.dataSize | string | `"1Gi"` |  |
 | backup.pvc.existingClaim | string | `""` | Use an existing PersistentVolumeClaim, overrides values above |
-| backupSchedule | string | `"0 3 * * *"` |  |
+| backup.schedule | string | `"0 3 * * *"` |  |
 | configs.BACKUP_URL | string | `""` |  |
 | configs.DBHOST | string | `"firefly-firefly-db"` |  |
 | configs.DBNAME | string | `"firefly"` |  |

@@ -1,4 +1,4 @@
-{{ if .Values.backupSchedule }}
+{{ if .Values.backup.schedule }}
 apiVersion: batch/v1
 kind: CronJob
 metadata:
@@ -10,7 +10,7 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
-  schedule: "{{ .Values.backupSchedule }}"
+  schedule: "{{ .Values.backup.schedule }}"
   successfulJobsHistoryLimit: 1
   failedJobsHistoryLimit: 1
   jobTemplate:
